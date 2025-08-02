@@ -4,17 +4,19 @@ function App() {
   return (
 
 
-      <div className="App">
-        <nav className="navbar">
-          <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-          </ul>
-        </nav>
+      
         
         <div className="header-wrapper">
+
+          <div className="App">
+            <nav className="navbar">
+              <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+              </ul>
+            </nav>
         <header className="header">
           <div className="header-left">
             <div className="header-text">

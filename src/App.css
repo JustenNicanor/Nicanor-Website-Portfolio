@@ -54,6 +54,7 @@ body {
 .navbar {
   padding: 15px 20px;              /* Increased padding for more spacing */
   margin-top: 10px;                /* Pushes navbar a bit lower */
+  margin-left: 350px;
   position: -webkit-sticky;        /* Safari support */
   position: sticky;
   top: 0;
@@ -123,14 +124,14 @@ body {
 /* Image container refined */
 .header-photo {
   position: absolute;
-  right: -515px;     /* Adjusted slightly more left */
-  top: 50%;        /* Lowered */
+  right: -475px;     /* Adjusted slightly more left */
+  top: 55%;        /* Lowered */
   transform: translateY(-50%);
   z-index: 2;
 }
 
 .profile-img {
-  width: 400px;    /* Larger */
+  width:450px;    /* Larger */
   height: auto;
   animation: fadeInDown 1s ease-in-out 1;
   filter: drop-shadow(0 0 100px rgba(21, 240, 211, 0.6)); /* Stronger glow */
