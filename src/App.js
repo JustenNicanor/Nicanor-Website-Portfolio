@@ -8,7 +8,7 @@ function App() {
           <li><a href="#about">About Me</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#certificates">Certificates</a></li>
         </ul>
       </nav>
 
@@ -17,7 +17,7 @@ function App() {
         <p>Computer Engineering Graduate | Web Developer | QA Tester</p>
 
         <div className="header-photo">
-          <img src="/profile.png" alt="Justen Nicanor" className="profile-img" />
+          <img src="/image.png" alt="Justen Nicanor" className="profile-img" />
         </div>
       </header>
 

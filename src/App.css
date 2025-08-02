@@ -6,16 +6,15 @@ body {
   color: #15f0d3; /* cyan */
 }
 .navbar {
-  background-color: #FFFFFF;
-  padding: 10px 20px;
-
-  position: -webkit-sticky; /* Safari < iOS 13 */
+  padding: 15px 20px;              /* Increased padding for more spacing */
+  margin-top: 10px;                /* Pushes navbar a bit lower */
+  position: -webkit-sticky;        /* Safari support */
   position: sticky;
-
   top: 0;
   z-index: 1000;
   width: 100%;
 }
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -27,14 +26,18 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: #1e1e1e;
+  color: #ffffff;
   font-weight: bold;
-  transition: color 0.2s ease;
+  padding-bottom: 4px;              /* Space for underline */
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
 .navbar a:hover {
   color: #15f0d3;
+  border-bottom: 2px solid #15f0d3;
 }
+
 .header {
   position: relative;
   padding: 40px 20px;
