@@ -2,54 +2,65 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <nav className="navbar">
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-        </ul>
-      </nav>
 
-      <header>
-        <h1>Justen L. Nicanor</h1>
-        <p>Computer Engineering Graduate | Web Developer | QA Tester</p>
 
-        <div className="header-photo">
-          <img src="/image.png" alt="Justen Nicanor" className="profile-img" />
+      <div className="App">
+        <nav className="navbar">
+          <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+          </ul>
+        </nav>
+        
+        <div className="header-wrapper">
+        <header className="header">
+          <div className="header-left">
+            <div className="header-text">
+              <p className="intro-text">Hello World, I am...</p>
+              <h1>Justen L. Nicanor</h1>
+              <p className="subtitle">Aspiring <strong><em>SOFTWARE ENGINEER</em></strong></p>
+            </div>
+            <div className="header-photo">
+            <img src="/profile1.png" alt="Justen Nicanor" className="profile-img" />
+          </div>
+
+            
+          </div>
+          <div className="about-container">
+              I'm a Computer Engineering major in Software development graduate from Polytechnic University of the Philippines. I am passionate in development, especially in mobile app and websites. I’ve worked on projects combining hardware and software like smart hydration devices and mobile apps and I enjoy building practical solutions that improve everyday life. I'm always looking to learn, grow, and contribute to real-world tech challenges.
+            
+
+            </div>
+
+              <a className="cv-button" href="/Justen-Nicanor-Resume.pdf" download="Justen-Nicanor-Resume.pdf">CV/RESUME</a>
+        
+              <div className="social-icons">
+                <a href="https://github.com/JustenNicanor" target="_blank" rel="noopener noreferrer">
+                  <img src="/github.svg" alt="GitHub" />
+                  <span className="label">GitHub</span>
+                </a>
+                <a href="https://www.facebook.com/share/1CLmbedhmg/" target="_blank" rel="noopener noreferrer">
+                  <img src="/facebook.svg" alt="Facebook" />
+                  <span className="label">Facebook</span>
+                </a>
+                <a href="mailto:justenlnicanor@gmail.com">
+                  <img src="/gmail.svg" alt="Gmail" />
+                  <span className="label">Gmail</span>
+                </a>
+            </div>
+            
+        </header>
+
+        
+
+
+
+          
         </div>
-      </header>
-
-      <section id="about">
-        <h2>About Me</h2>
-        <p>I am a fresh graduate of Computer Engineering with internship experience in web development and QA testing. I create efficient, user-focused websites and systems.</p>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>React.js</li>
-          <li>HTML, CSS, JavaScript</li>
-          <li>PHP & MySQL</li>
-          <li>QA Testing & Debugging</li>
-        </ul>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-          <li><strong>Material Monitoring System</strong> – For Hayakawa’s local operations</li>
-          <li><strong>iDrated App</strong> – Smart water tracker integrated with ESP32</li>
-        </ul>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: justen@example.com</p>
-        <p>GitHub: <a href="https://github.com/JustenNicanor" target="_blank" rel="noreferrer">JustenNicanor</a></p>
-      </section>
     </div>
+
   );
 }
 

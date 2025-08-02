@@ -1,10 +1,56 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&display=swap');
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 13ch;
+  }
+  100% {
+    width: 13ch;
+  }
+}
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Reset some default margins */
+* {
   margin: 0;
   padding: 0;
-  background-color: #1e1e1e; /* dark gray */
-  color: #15f0d3; /* cyan */
+  box-sizing: border-box;
 }
+
+.intro-text {
+  color: white;
+  font-size: 22px;
+  font-family: 'Instrument Sans', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  width: 26ch;
+  animation: typing 5s steps(26, end) 10s infinite, blink 0.7s step-end infinite;
+}
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: #15f0d3;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: normal; /* removed bold */
+  font-family: 'Instrument Sans', sans-serif;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
 .navbar {
   padding: 15px 20px;              /* Increased padding for more spacing */
   margin-top: 10px;                /* Pushes navbar a bit lower */
@@ -13,6 +59,8 @@ body {
   top: 0;
   z-index: 1000;
   width: 100%;
+  display: flex;             /* Add this */
+  justify-content: center;   /* And this */
 }
 
 .navbar ul {
@@ -22,15 +70,6 @@ body {
   gap: 30px;
   margin: 0;
   padding: 0;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  padding-bottom: 4px;              /* Space for underline */
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
 .navbar a:hover {
@@ -44,33 +83,162 @@ body {
   min-height: 300px;
 }
 
+.header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
 .header-text {
   position: relative;
   z-index: 1;
   max-width: 60%;
+  margin-left: 175px; /* move more to right */
 }
 
+.intro-text {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-style: italic;
+  font-weight: bold;
+  color: #15f0d3;
+  margin: 0 0 5px 0; /* Top 0, bottom 5px */
+}
+
+.subtitle {
+  font-size: 20px;
+  color: white;
+  margin-top: 1px; /* Add this line */
+  margin-bottom: 30px;
+}
+
+
+/* Image container refined */
 .header-photo {
   position: absolute;
-  top: 50%;
-  right: 20px;
+  right: -515px;     /* Adjusted slightly more left */
+  top: 50%;        /* Lowered */
   transform: translateY(-50%);
-  animation: fadeDown 2s ease-in-out forwards;
   z-index: 2;
 }
 
 .profile-img {
-  width: 200px;
+  width: 400px;    /* Larger */
   height: auto;
-  filter: drop-shadow(0 10px 25px #15f0d3);
+  animation: fadeInDown 1s ease-in-out 1;
+  filter: drop-shadow(0 0 100px rgba(21, 240, 211, 0.6)); /* Stronger glow */
+}
+
+.about-container {
+  max-width: 500px;
+  margin-left: 175px; /* Aligns with header-text */
+  margin-top: 0;
+  padding: 20px;
+  border: 1.5px solid white;
+  border-radius: 17px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 15px;
+  font-family: 'Instrument Sans', sans-serif;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
 
 
-/* Smooth fade down animation */
-@keyframes fadeDown {
+.cv-button {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-left: 175px;
+  width: 500px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: transparent;
+  border: 1.5px solid white;
+  border-radius: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Instrument Sans', sans-serif;
+  text-align: center;
+}
+
+
+.cv-button:hover {
+    border: 1.5px solid  #15f0d3;
+    color: #15f0d3;
+}
+.social-icons {
+  margin-top: 20px;
+  margin-left: 170px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  opacity: 0.8;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-icons a:hover {
+  background-color: #15f0d3;
+  border-color: #15f0d3;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.social-icons .label {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #15f0d3;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.social-icons a:hover .label {
+  opacity: 1;
+}
+
+
+/* Image entrance animation */
+@keyframes fadeInDown {
   0% {
     opacity: 0;
-    transform: translateY(-70px);
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
@@ -78,4 +246,26 @@ body {
   }
 }
 
+.header-wrapper {
+  display: flex;
 
+}
+
+
+@media screen and (max-width: 1024px) {
+  .header-wrapper {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-wrapper {
+    transform: scale(0.75);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-wrapper {
+    transform: scale(0.6);
+  }
+}
