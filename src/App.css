@@ -6,7 +6,7 @@ body {
   color: #15f0d3; /* cyan */
 }
 .navbar {
-  background-color: #00FFFFFF;
+  background-color: #FFFFFF;
   padding: 10px 20px;
 
   position: -webkit-sticky; /* Safari < iOS 13 */
@@ -35,3 +35,44 @@ body {
 .navbar a:hover {
   color: #15f0d3;
 }
+.header {
+  position: relative;
+  padding: 40px 20px;
+  min-height: 300px;
+}
+
+.header-text {
+  position: relative;
+  z-index: 1;
+  max-width: 60%;
+}
+
+.header-photo {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  animation: fadeDown 2s ease-in-out forwards;
+  z-index: 2;
+}
+
+.profile-img {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(0 10px 25px #15f0d3);
+}
+
+
+/* Smooth fade down animation */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

@@ -15,6 +15,10 @@ function App() {
       <header>
         <h1>Justen L. Nicanor</h1>
         <p>Computer Engineering Graduate | Web Developer | QA Tester</p>
+
+        <div className="header-photo">
+          <img src="/profile.png" alt="Justen Nicanor" className="profile-img" />
+        </div>
       </header>
 
       <section id="about">
