@@ -5,12 +5,11 @@ import './App.css';
 
 function Skills() {
   return (
-    <header className="header">
+    <header className="header1">
       <nav className="nav-bar1">
-        <NavLink to="/" end className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>About Me</NavLink>
+        <NavLink to="/" end className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Me</NavLink>
         <NavLink to="/skills" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Skills</NavLink>
         <NavLink to="/projects" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Projects</NavLink>
-        <NavLink to="/certificates" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Certificates</NavLink>
       </nav>
 
       <div className="skills-grid">
@@ -19,7 +18,7 @@ function Skills() {
             <div className="icon-grid">
               <div className="icon-item"><img src="/icons/html.svg" alt="HTML" /><span>HTML</span></div>
               <div className="icon-item"><img src="/icons/css.svg" alt="CSS" /><span>CSS</span></div>
-              <div className="icon-item"><img src="/icons/java.svg" alt="JavaScript" /><span>JavaScript</span></div>
+              <div className="icon-item"><img src="/icons/javascript.svg" alt="JavaScript" /><span>JavaScript</span></div>
               <div className="icon-item"><img src="/icons/python.svg" alt="Python" /><span>Python</span></div>
               <div className="icon-item"><img src="/icons/kotlin.svg" alt="Kotlin" /><span>Kotlin</span></div>
               <div className="icon-item"><img src="/icons/php.svg" alt="PHP" /><span>PHP</span></div>

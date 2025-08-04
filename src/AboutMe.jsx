@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import Skills from './Skills.jsx';
 import Projects from './Projects.jsx';
-import Certificates from './Certificates.jsx';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import './App.css';
@@ -29,10 +28,9 @@ function MainContent() {
   
     <header className="header">
       <nav className="nav-bar">
-        <NavLink to="/" end className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>About Me</NavLink>
+        <NavLink to="/" end className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Me</NavLink>
         <NavLink to="/skills" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Skills</NavLink>
         <NavLink to="/projects" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Projects</NavLink>
-        <NavLink to="/certificates" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Certificates</NavLink>
       </nav>
 
       <div className="header-left">
@@ -94,7 +92,6 @@ function AboutMe() {
           <Route path="/" element={<MainContent />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/certificates" element={<Certificates />} />
         </Routes>
       </div>
     </Router>
